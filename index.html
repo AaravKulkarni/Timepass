@@ -4,17 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
     <title>Timepass</title>
-    <script src="main.js"></script>
 </head>
 <body>
     <center>
-        <input type="text" id="checking">
         <br>
-        <button onclick="check()" id="btn">Check</button>
-        <div id="img">
-
+        <br>
+        <input type="text" id="inpname" class="form-control" placeholder="Input Name" style="width: 45%;">
+        <br>
+        <br>
+        <button class="btn btn-danger" onclick="check()">Check</button>
+        <br>
+        <br>
+        <div id="fejn">
         </div>
     </center>
+    <script>
+        function check(){
+            var inpuname = document.getElementById("inpname").value;
+            if(inpuname == "Aaravk2020"){
+                h1 = "<h1><b><u>Anime I Have Watched</u></b></h1>";
+                animeihvwcht = "<br><p>High School DxD --- &nbsp; High School DxD New --- &nbsp; High School DxD Born --- &nbsp; High School DxD Hero --- &nbsp; Shinmai Maou No Testament --- &nbsp; Princess Lover --- &nbsp; Campione!</p>";
+                combined = h1 + animeihvwcht;
+                document.getElementById("fejn").innerHTML = combined;
+            }
+        }
+    </script>
 </body>
 </html>
